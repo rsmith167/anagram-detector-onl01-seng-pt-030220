@@ -1,11 +1,22 @@
 # Your code goes here!
-class Anagram(word, list)
+class Anagram
+  
+  attr_accessor :word, :list
   
   def initialize(word)
-    
+    @word = word
   end
+  
   def match(list)
+    return_array = []
+    @list = list.split(" ")
     
+    @list.each {|a_word| 
+    if a_word.sort == @word.sort
+      return_array << a_word
+    end
+      }
+      return_array
   end
   
 end
