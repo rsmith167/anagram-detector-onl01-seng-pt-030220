@@ -10,6 +10,7 @@ class Anagram
   
   def match(list)
     return_array = []
+    @list = []
     @list = list
     @list.each {|a_word| 
     if a_word.sort == @word.sort
